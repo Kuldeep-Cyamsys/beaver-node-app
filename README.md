@@ -14,6 +14,18 @@ The project uses Java 17, Android Gradle Plugin 8.13.2, Gradle 8.13 and Android
 SDK 36. Target SDK is 36. A future upgrade to target 37 must add the applicable
 Android local-network permission flow before release.
 
+## What the app covers
+
+| Screen | Features |
+|---|---|
+| **Connection** | Connect to the Beaver AP through Android's connection dialog, or manually through Wi-Fi settings. Displays the connected device's MAC address. |
+| **Live** | Shows all eight frequencies and NTC resistances, channel fault flags, sample age, battery percentage and PCB temperature. Refreshes every five seconds while open. |
+| **Device** | Changes logging interval, own node ID and gateway target ID. Synchronizes the RTC with phone time or accepts a manually selected date/time. |
+| **Radio** | Configures node role, PANID, channel, air rate, transmit power, route timeout, link ACK timeout, application ACK timeout and radio enable/disable. |
+| **Logs** | Downloads all retained logs or a sequence range, stores completed files on the phone, and supports saving, sharing and deleting phone copies. |
+| **Log viewer** | Shows the downloaded record count, recent 100 records, full channel details and a selectable-channel frequency plot. |
+| **Health** | Displays RTC validity, UART errors, rejected frames, missed logs, radio retries, storage state and gateway delivery progress. Also allows AP shutdown. |
+
 ## Install and connect
 
 1. Install the provided debug APK on your Android phone. Allow installation from
