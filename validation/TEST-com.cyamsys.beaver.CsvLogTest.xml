@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.cyamsys.beaver.CsvLogTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-09-23T11:56:38.798Z" hostname="MSI" time="0.019">
+  <properties/>
+  <testcase name="badAuxiliaryRejected" classname="com.cyamsys.beaver.CsvLogTest" time="0.004"/>
+  <testcase name="holesAllowedAndBigIdsExact" classname="com.cyamsys.beaver.CsvLogTest" time="0.001"/>
+  <testcase name="emptyStore" classname="com.cyamsys.beaver.CsvLogTest" time="0.0"/>
+  <testcase name="v1Supported" classname="com.cyamsys.beaver.CsvLogTest" time="0.0"/>
+  <testcase name="v2NullAndZero" classname="com.cyamsys.beaver.CsvLogTest" time="0.001"/>
+  <testcase name="boundedPreview" classname="com.cyamsys.beaver.CsvLogTest" time="0.007"/>
+  <testcase name="rejectHttp200ErrorRow" classname="com.cyamsys.beaver.CsvLogTest" time="0.001"/>
+  <testcase name="truncatedExportNotComplete" classname="com.cyamsys.beaver.CsvLogTest" time="0.001"/>
+  <testcase name="wrongStreamRejected" classname="com.cyamsys.beaver.CsvLogTest" time="0.0"/>
+  <testcase name="duplicateRejected" classname="com.cyamsys.beaver.CsvLogTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
