@@ -1,0 +1,101 @@
+{
+  "status_response": {
+    "device_id": "b0a7327aea29",
+    "firmware_version": "0.2.0",
+    "ap_on": true,
+    "radio_ready": true,
+    "radio_error": 0,
+    "frames": 120,
+    "bad_frames": 0,
+    "uart_overflows": 0,
+    "missed_logs": 0,
+    "radio_retries": 0,
+    "time_valid": true,
+    "utc": 1792540800,
+    "sample_age_ms": 4342,
+    "stale": false,
+    "BatteryPercentage": 99,
+    "PcbTemperature": 31.0,
+    "channels": [
+      {
+        "frequency_hz1": 2201,
+        "resistance_ohm1": 2010,
+        "status1": 0
+      },
+      {
+        "frequency_hz2": 2202,
+        "resistance_ohm2": 2020,
+        "status2": 0
+      },
+      {
+        "frequency_hz3": 2203,
+        "resistance_ohm3": 2030,
+        "status3": 0
+      },
+      {
+        "frequency_hz4": 2204,
+        "resistance_ohm4": 2040,
+        "status4": 0
+      },
+      {
+        "frequency_hz5": 2205,
+        "resistance_ohm5": 2050,
+        "status5": 0
+      },
+      {
+        "frequency_hz6": 2206,
+        "resistance_ohm6": 2060,
+        "status6": 0
+      },
+      {
+        "frequency_hz7": 2207,
+        "resistance_ohm7": 2070,
+        "status7": 0
+      },
+      {
+        "frequency_hz8": 2208,
+        "resistance_ohm8": 2080,
+        "status8": 0
+      }
+    ],
+    "stream_id": "357476119588692749",
+    "first_sequence": "1",
+    "last_sequence": "72",
+    "delivery_cursor": "70",
+    "record_capacity": 103168,
+    "storage_fault": false
+  },
+  "fresh_config_response": {
+    "revision": 1,
+    "interval_s": 900,
+    "node_id": 1,
+    "target": 2,
+    "panid": 1,
+    "role": 0,
+    "channel": 18,
+    "rate": 0,
+    "power": 22,
+    "route_ms": 30000,
+    "link_ack_ms": 15000,
+    "app_ack_ms": 90000,
+    "radio_enabled": false,
+    "communication_mode": "broadcast",
+    "security_enabled": true,
+    "encryption_key_source": "module_existing"
+  },
+  "device_patch": {
+    "interval_s": 300,
+    "node_id": 3,
+    "target": 1
+  },
+  "time_request": {
+    "utc": 1792540800
+  },
+  "time_response": {
+    "ok": true
+  },
+  "ap_disable_response": {
+    "ok": true,
+    "disable_after_ms": 1000
+  }
+}

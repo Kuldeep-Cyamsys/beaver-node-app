@@ -1,4 +1,22 @@
-# Validation — Beaver Node 0.1.0
+# Validation — Beaver Node
+
+## Version 0.2.0 handoff verification
+
+Checked 21 October 2026 before publishing the 0.2.0 code and integration guide.
+
+- Gradle 8.13 `--offline testDebugUnitTest lintDebug assembleDebug` succeeded
+  using the existing Java 17 / SDK installation. Unit-test and APK tasks were
+  up-to-date; the retained test results show 17 tests, zero failures or errors.
+- Android lint completed with zero errors and two warnings.
+- The published 0.2.0 APK matches `app/build/outputs/apk/debug/app-debug.apk`
+  byte-for-byte. Its SHA256 is recorded in `APK-SHA256.txt`.
+- The toolchain reported SDK XML/location warnings and Gradle deprecation
+  warnings; these did not prevent the successful build.
+- No fresh hardware acceptance test was performed for this publishing task.
+- Integration guide: `docs/integration/Beaver_Node_Android_Integration_Guide.pdf`.
+  The source manifest records the implementation files inspected for the guide.
+
+## Historical version 0.1.0 validation
 
 Date: 23 September 2026.
 

@@ -2,8 +2,19 @@
 
 Repository: https://github.com/Kuldeep-Cyamsys/beaver-node-app
 
-[Download the Android test APK](BeaverNode-0.1.0-debug.apk) ·
+[Download the Android 0.2.0 test APK](BeaverNode-0.2.0-debug.apk) ·
 [Feature and API guide](APP_GUIDE.md) · [Validation status](VALIDATION.md)
+
+## Integration into another Android app
+
+The [development and API integration guide (PDF)](docs/integration/Beaver_Node_Android_Integration_Guide.pdf)
+documents the Android 0.2.0 and firmware 0.2.0 baseline: Wi-Fi connection and
+permissions, every device API, request/response examples, error handling,
+configuration validation, RTC, CSV integrity, module boundaries and acceptance tests.
+Use the [searchable HTML copy](docs/integration/Beaver_Node_Android_Integration_Guide.html)
+for copying examples. [JSON examples](docs/integration/api-examples.json) and
+[source fingerprints](docs/integration/source-manifest.json) accompany the guide.
+This is the ESP32 node API, separate from the Raspberry Pi gateway configurator.
 
 This is the Android app repository. ESP32 firmware is maintained separately in
 https://github.com/Kuldeep-Cyamsys/esp32_VW_dev.
@@ -135,6 +146,15 @@ Required on a phone and ESP32 before field use:
   https://developer.android.com/privacy-and-security/local-network-permission
 - Firmware: `hello_world/main/web.c`, `main/settings.c`, `docs/API.md`.
 
-Firmware API version reporting, AP credential changes, exact live record count,
-new radio encryption settings, OTA and NTC conversion are outside this app's
+API schema version reporting, AP credential changes, exact live record count,
+radio encryption key editing, OTA and NTC conversion are outside this app's
 current contract. The app does not claim these capabilities.
+
+## Version 0.2.0
+
+Radio page shows firmware-reported communication mode and security policy.
+Firmware 0.2.0 uses broadcast and enables security with the existing E52 key;
+the app does not read or change that key. Default profile is channel 18,
+62.5K, 22 dBm. Health includes firmware_version. Older firmware remains supported
+but cannot report the new policy fields. No APK installation or firmware flashing
+is performed automatically.

@@ -152,7 +152,11 @@ public final class MainActivity extends Activity {
     }
     private void radio(){
         heading("Radio settings");if(needConfig())return;
-        para("These are firmware-accepted ranges, not an approved regional RF preset. Channel 0 is a placeholder. Confirm deployment frequency and power before enabling transmission.");
+        para("These are firmware-accepted ranges, not an approved regional RF preset. Firmware v0.2.0 defaults: channel 18, 62.5K, 22 dBm. Confirm deployment frequency and power before enabling transmission.");
+        if(config.has("communication_mode")) {
+            para("Communication mode: "+config.optString("communication_mode")+" (firmware controlled).");
+            para("Radio security: "+(config.optBoolean("security_enabled")?"enabled":"disabled")+". Existing module key is retained; matching keys must be provisioned using the Ebyte tool.");
+        } else para("This firmware does not report radio mode/security. Update to v0.2.0 for the new profile.");
         field("node_id","This node ID","Change ID and role together when needed.");field("target","Gateway target ID","Gateway-connected routing node, 0–32767.");
         field("panid","Mesh PANID","0–65534. Must match the gateway and other mesh nodes.");
         field("role","Node role","0 = routing; 1 = terminal.");field("channel","Channel index","0–79. Frequency = 850.125 + channel MHz.");
@@ -224,7 +228,7 @@ public final class MainActivity extends Activity {
     @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request==20&&result==RESULT_OK&&data!=null&&pendingSave!=null){File source=pendingSave;Uri uri=data.getData();task("Saving CSV…",()->{try(InputStream in=new FileInputStream(source);OutputStream out=getContentResolver().openOutputStream(uri,"wt")){if(out==null)throw new IOException("Cannot open destination");byte[] buf=new byte[8192];int n;while((n=in.read(buf))!=-1)out.write(buf,0,n);}},()->setMessage("CSV saved to the selected location."));}}
     private void health(){
         heading("Diagnostics");action("Refresh status and settings",()->refresh(true));
-        if(status!=null){for(String key:new String[]{"device_id","time_valid","utc","ap_on","radio_ready","radio_error","frames","bad_frames","uart_overflows","missed_logs","radio_retries","stream_id","first_sequence","last_sequence","delivery_cursor","record_capacity","storage_fault"}){LinearLayout c=card();c.addView(text(key,12,MUTED));c.addView(text(status.optString(key),17,INK));}}
+        if(status!=null){for(String key:new String[]{"device_id","firmware_version","time_valid","utc","ap_on","radio_ready","radio_error","frames","bad_frames","uart_overflows","missed_logs","radio_retries","stream_id","first_sequence","last_sequence","delivery_cursor","record_capacity","storage_fault"}){LinearLayout c=card();c.addView(text(key,12,MUTED));c.addView(text(status.optString(key),17,INK));}}
         para("Radio errors: 0 none; 1 configuration failed; 2 log read failed; 3 cursor save failed; 4 gateway ACK timeout. radio_ready confirms setup, not end-to-end delivery.");
         action("Disable node Wi-Fi",()->confirm("Turn off Beaver Wi-Fi?","The app will disconnect. Press the physical node button to enable Wi-Fi again.",()->task("Disabling node AP…",()->api.request("ap/disable","POST",null),()->{releaseRequest();api.network=null;connected=false;status=null;config=null;message="AP shutdown requested. Press the node button to reconnect.";render();})));
         para("Beaver Node 0.1.0 · Firmware API v1\nAll node communication uses the selected Wi-Fi network. No cloud service or analytics.");

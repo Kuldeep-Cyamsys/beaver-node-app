@@ -1,0 +1,21 @@
+{
+  "baseline": "Android 0.2.0 / firmware 0.2.0 / API v1",
+  "files": {
+    "outputs/beaver-android/app/src/main/java/com/cyamsys/beaver/CsvLog.java": "8cd14fab900e0e9bc3aceefbc5f614fe2d1eed567a9545ebf1ee9cbcd56b5511",
+    "outputs/beaver-android/app/src/main/java/com/cyamsys/beaver/DeviceApi.java": "611abad1766ca750ceb2b18b07f4cf1a5b76f4c585ceb64f17a4b47dd5a0444b",
+    "outputs/beaver-android/app/src/main/java/com/cyamsys/beaver/LogProvider.java": "2a6dceb1d59285f7d8b37d0c372acc55a163b071efeaa975b18c8ee2a348f5af",
+    "outputs/beaver-android/app/src/main/java/com/cyamsys/beaver/MainActivity.java": "9942c7ba353d79840bccf36fa596ff70751cc946a6a8ea35c4a1bbc1bace0482",
+    "outputs/beaver-android/app/src/main/java/com/cyamsys/beaver/Protocol.java": "5d0a5afb8dc7d80301b551cf45d281e87dbcda23772e7932cc17fb7dec238abe",
+    "outputs/beaver-android/app/src/main/AndroidManifest.xml": "b1271f9340f8bb300a295fc819e92ce5d34a2358b97664626a5edb57e145289a",
+    "outputs/beaver-android/app/src/main/res/drawable/ic_beaver.xml": "d531964f79b1182b9ae007d11fd6291a8049925c9484cc38120db4ff73e12465",
+    "outputs/beaver-android/app/src/main/res/values/styles.xml": "061526e2eea3bd3760ebaf0d44c88f47f606d5e9d01c7d7572ec38d955e34801",
+    "outputs/beaver-android/app/src/main/res/xml/data_extraction_rules.xml": "722b8f43af82fd7c8a7d2841897a0c9fcbeac8ba26e0f42b8cfc2b1b844c1270",
+    "outputs/beaver-android/app/src/main/res/xml/network_security_config.xml": "ab83a1039abc3536f0b7935d8677635f2b3570ba3bb09aa9d58a8941d33082c8",
+    "outputs/beaver-android/app/build.gradle": "bfed2ed2591114c95ccb7fbd733c8a9762c5e9604fea4c36e9bd215f5f0609e6",
+    "outputs/beaver-node-v0.2.0/main/web.c": "ee8d00504e78b0fb8d63725a90779aef77888a37c22a546e6f798ce63c4c7d57",
+    "outputs/beaver-node-v0.2.0/main/settings.c": "fd71a1ee7c1b744bd564837eae8acee4f56472a2d5e19d082b28aa0720deaab3",
+    "outputs/beaver-node-v0.2.0/main/storage.c": "09a2b47d5395d743b14708dabec4642237b260bc40771cca3d2816628ac53a53",
+    "outputs/beaver-node-v0.2.0/main/radio.c": "2adfbc454d39e015d3ea3135db85981abedc87aa70e12461a8a4641c98af40a7",
+    "outputs/beaver-node-v0.2.0/main/app_main.c": "5c3c77513470c4b9e663202d9725c99d49f345c52a40da332c6d956ed979a42b"
+  }
+}
